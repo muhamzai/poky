@@ -17,6 +17,8 @@ SRC_URI = "${SOURCEFORGE_MIRROR}/freetype/freetype-${PV}.tar.bz2"
 SRC_URI[md5sum] = "5682890cb0267f6671dd3de6eabd3e69"
 SRC_URI[sha256sum] = "8469fb8124764f85029cc8247c31e132a2c5e51084ddce2a44ea32ee4ae8347e"
 
+SRC_URI += "file://freetype-fix-CVE-2015-9290.patch"
+
 BINCONFIG = "${bindir}/freetype-config"
 
 inherit autotools-brokensep pkgconfig binconfig-disabled multilib_header
